@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            //GithubCheck
+            //Updated:10:41
             string userChoice = "";
             List<int> myList = new List<int>() {4,5,5,5,5,5,5,5,5,5,5};
             Console.BackgroundColor = ConsoleColor.DarkRed;
