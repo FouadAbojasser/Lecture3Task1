@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //GithubCheck
             string userChoice = "";
             List<int> myList = new List<int>() {4,5,5,5,5,5,5,5,5,5,5};
             Console.BackgroundColor = ConsoleColor.DarkRed;
@@ -492,6 +493,7 @@
                                 Console.WriteLine();
                                 // =================================
                                 break;
+
                             default:
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine();
@@ -545,9 +547,12 @@
                                     Console.Write($"Your list after removing {valueTobeRemoved}  = [ ".PadLeft(13 + "Your list after removing = [ ".Length));
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine($"The value {valueTobeRemoved} does not exist in the list".PadLeft(12 + "The value does not exist in the list ".Length));
                                     Console.WriteLine();
-                                    Console.Write($"Your list has no changes  = [ ".PadLeft(11 + "Your list has no changes  = [ ".Length));
+                                    Console.ForegroundColor = ConsoleColor.Green;
+                                    Console.Write($"Your list has no changes  = [ ".PadLeft(10 + "Your list has no changes  = [ ".Length));
+
                                 }
                                 for (int i = 0; i < myList.Count; i++)
                                 {
@@ -644,16 +649,23 @@
                                 Console.WriteLine();
 
                                 break;
+
+                            default:
+                                Console.WriteLine();
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Invalid Input !!".PadLeft(10 + "Invalid Input !!".Length));
+                                Console.ResetColor();
+                                Console.WriteLine();
+                                break;
                         }
                         break;
-
 
 
                     case "sch":
                         Console.Write("Enter value to search for: ");
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.ResetColor();
                         int valueToSearchFor = Convert.ToInt32(Console.ReadLine());
+                        Console.ResetColor();
                         bool searchfoundInTheList = false;
                         List<int> indexes = new List<int>();
  
